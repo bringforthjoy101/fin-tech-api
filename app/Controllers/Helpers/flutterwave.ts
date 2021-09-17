@@ -27,7 +27,7 @@ const initialize = async (data) => {
 
 const verifyTransaction = async (data) => {
     const res = await rave.Transaction.verify(data);
-    // console.log('datan', res)
+    console.log('res', res)
     return res;
 }
 

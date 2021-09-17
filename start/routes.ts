@@ -33,7 +33,7 @@ Route.group(() => {
   Route.group(() => {
     Route.get("/", "TransactionsController.allTransactions");
     Route.post("initialize", "TransactionsController.initializeTransaction");
-    Route.get(":id", "TransactionsController.singleTransaction");
+    Route.get("id/:id", "TransactionsController.singleTransaction");
     Route.get("verify", "TransactionsController.verifyTransaction");
     Route.get("verify-withdrawal", "TransactionsController.verifyWithdrawalTransaction");
     Route.post("withdraw", "TransactionsController.withdrawFundsToBeneficiary").middleware(userExists).middleware(checkBalance);

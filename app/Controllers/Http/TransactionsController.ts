@@ -68,7 +68,7 @@ export default class TransactionsController {
                 tx_ref: transaction_id,
                 amount,
                 currency: "NGN",
-                redirect_url: `${Env.get('FIN_TECH_API_BASE_URL')}/transactions/verify`,
+                redirect_url: `${Env.get('FIN_TECH_API_BASE_URL')}/api/transactions/verify`,
                 payment_options: 'card',
                 meta: {
                     consumer_id: userExists.id
@@ -168,7 +168,7 @@ export default class TransactionsController {
                 narration: narration ? narration : 'Funds Withdrawal',
                 currency: "NGN",
                 reference: transaction_id,
-                callback_url: `${Env.get('FIN_TECH_API_BASE_URL')}/transactions/verify-withdrawal`,
+                callback_url: `${Env.get('FIN_TECH_API_BASE_URL')}/api/transactions/verify-withdrawal`,
                 debit_currency: "NGN"
             }
 
