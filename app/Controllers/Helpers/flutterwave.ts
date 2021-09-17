@@ -38,6 +38,7 @@ const getTransactions = async () => {
 
 const transferFundsToBank = async (data) => {
     const res = await rave.Transfer.initiate(data);
+    console.log('res', res)
     return res;
 }
 
