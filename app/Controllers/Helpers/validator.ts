@@ -103,10 +103,10 @@ const validate = async (request) => {
     const {bank_name, bank_code, bank_account_name, bank_account_number} = request.body();
       await validator.validate({
         schema: schema.create({
-          bank_name: schema.string(),
-          bank_code: schema.string(),
-          bank_account_name: schema.string(),
-          bank_account_number: schema.string()
+          bank_name: schema.string.optional(),
+          bank_code: schema.string.optional(),
+          bank_account_name: schema.string.optional(),
+          bank_account_number: schema.string.optional()
         }),
         data: { bank_name, bank_code, bank_account_name, bank_account_number },
         messages: {
